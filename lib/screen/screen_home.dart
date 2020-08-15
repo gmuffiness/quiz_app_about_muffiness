@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
       isLoading = true;
     });
     final response = await http
-        .get('https://drf-quiz-test.herokuapp.com/quiz/3/'); //# 링크 수정할 곳
+        .get('http://gmuffiness.pythonanywhere.com/quiz/3/'); //# 링크 수정할 곳
     if (response.statusCode == 200) {
       setState(() {
         quizs = parseQuizs(utf8.decode(response.bodyBytes));
